@@ -1,0 +1,49 @@
+HUONG DAN CAU HINH CAC CHUC NANG MOI
+====================================
+
+1. Tao su kien canh bao nguoi la tren Blynk
+--------------------------------------------
+- Mo Blynk Console, chon Template dang dung cho khoa cua.
+- Vao Events, tao mot Event moi.
+- Event code phai ghi dung: stranger_alert
+- Bat Notifications/Push notification cho Event nay.
+
+Neu khong tao Event code stranger_alert thi ESP32 van phat hien va luu
+nhat ky nguoi la, nhung dien thoai se khong hien thong bao day.
+
+
+2. Tao them cac Datastream tren Blynk
+-------------------------------------
+- V9:  String  - Nhat ky truy cap moi nhat.
+- V10: Integer - Thoi gian xac thuc, don vi ms, khoang 0 den 5000.
+- V11: Integer - So the RFID da dang ky, khoang 0 den 120.
+- V12: Integer - Thoi gian phat lenh canh bao, don vi ms, khoang 0 den 10000.
+
+Tren giao dien dien thoai co the dung Label/Value Display cho V9-V12.
+Datastream V5 dung de chon ID the can xoa, can doi khoang gia tri thanh
+0 den 119.
+
+
+3. Thu tu nap chuong trinh
+-------------------------
+- Nap chuong trinh ESP32-S3 truoc.
+- Sau do nap chuong trinh STM32.
+
+Giao thuc UART moi gui ID the va thoi gian xac thuc tu STM32 sang ESP32.
+ESP32 van giu xu ly ky tu 'a' de tuong thich voi ban STM32 cu.
+
+
+4. Ket qua can quan sat khi kiem thu
+-----------------------------------
+- The hop le: Serial hien [AUTH] RFID, ID, thoi gian ms va PASS/FAIL.
+- Khuon mat hop le: Serial hien [AUTH] FACE, ID, thoi gian ms va PASS/FAIL.
+- Nguoi la: dien thoai nhan thong bao "CANH BAO: Phat hien nguoi la...".
+- Serial hien [ALERT] va thoi gian phat lenh canh bao.
+- V9 hien nhat ky moi nhat kem ngay gio, phuong thuc, ket qua va thoi gian.
+- Nhat ky 100 lan truy cap gan nhat duoc luu trong NVS cua ESP32-S3.
+- STM32 quan ly toi da 120 the RFID, ID tu 0 den 119.
+
+PASS chi xuat hien khi thoi gian xac thuc nho hon 1000 ms hoac thoi gian
+phat lenh canh bao nho hon 5000 ms. Can do tren mo hinh that de lay so lieu
+dua vao bao cao; toc do mang va may chu Blynk co the anh huong thoi gian
+thong bao thuc su xuat hien tren dien thoai.

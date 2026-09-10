@@ -1,0 +1,24 @@
+--cpu Cortex-M3
+"sm_key\startup_stm32f103xb.o"
+"sm_key\main.o"
+"sm_key\stm32f1xx_it.o"
+"sm_key\stm32f1xx_hal_msp.o"
+"sm_key\rc522.o"
+"sm_key\stm32f1xx_hal_gpio_ex.o"
+"sm_key\stm32f1xx_hal_spi.o"
+"sm_key\stm32f1xx_hal.o"
+"sm_key\stm32f1xx_hal_rcc.o"
+"sm_key\stm32f1xx_hal_rcc_ex.o"
+"sm_key\stm32f1xx_hal_gpio.o"
+"sm_key\stm32f1xx_hal_dma.o"
+"sm_key\stm32f1xx_hal_cortex.o"
+"sm_key\stm32f1xx_hal_pwr.o"
+"sm_key\stm32f1xx_hal_flash.o"
+"sm_key\stm32f1xx_hal_flash_ex.o"
+"sm_key\stm32f1xx_hal_exti.o"
+"sm_key\stm32f1xx_hal_uart.o"
+"sm_key\system_stm32f1xx.o"
+--strict --scatter "sm_key\sm_key.sct"
+--summary_stderr --info summarysizes --map --load_addr_map_info --xref --callgraph --symbols
+--info sizes --info totals --info unused --info veneers
+--list "sm_key.map" -o sm_key\sm_key.axf

@@ -1,0 +1,4 @@
+Removed Pin From Net: NetName=GND Pin=JACK DC1-1
+Removed Pin From Net: NetName=12V Pin=JACK DC1-2
+Added Pin To Net: NetName=12V Pin=JACK DC1-1
+Added Pin To Net: NetName=GND Pin=JACK DC1-2
